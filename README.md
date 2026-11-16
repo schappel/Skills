@@ -2,14 +2,13 @@
 
 My personal agent skills.
 
-Each skill lives in `skills/<name>/` with a `SKILL.md` and any supporting reference files. They are mine to change — I maintain them here rather than editing a shared copy.
+Each skill lives in `<name>/` at the top level, with a `SKILL.md` and any supporting reference files. They are mine to change — I maintain them here rather than editing a shared copy.
 
 ## Layout
 
 ```
-skills/
-  pr-description/     Write a pull request description
-  zap-style/          Zap house C#/TypeScript style, scored against a 7-axis rubric
+pr-description/     Write a pull request description
+zap-style/          Zap house C#/TypeScript style, scored against a 7-axis rubric
 ```
 
 ## Use
@@ -19,7 +18,7 @@ Claude Code loads skills from `~/.claude/skills`, so each one is symlinked from 
 ```powershell
 New-Item -ItemType SymbolicLink `
   -Path   "$HOME\.claude\skills\<name>" `
-  -Target "D:\Personal\Skills\skills\<name>"
+  -Target "D:\Personal\Skills\<name>"
 ```
 
 ## Provenance
